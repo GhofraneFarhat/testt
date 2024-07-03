@@ -1,0 +1,54 @@
+package:
+  name: plaspipe
+  version: "0.1"
+
+source:
+  path: .
+
+build:
+  number: 0
+  noarch: python
+  script: |
+    {{ PYTHON }} -m pip install . -vv
+    
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+  run:
+    - python >=3.10
+    - networkx >=2.7
+    - pandas >=2.0.0
+    - matplotlib >=3.7.0
+    - seaborn >=0.12.2
+    - biopython >=1.81
+    - scipy >=1.10.1
+    - numpy >=1.21.5
+    - scikit-learn >=0.23.1
+    - tensorflow >=2.8.0
+    #- spektral >=1.0.8
+    #- gurobipy >=9.1.2
+
+test:
+  imports:
+    - plaspipe
+  commands:
+    - python -c "import plaspipe; print(plaspipe.__version__)"
+
+about:
+  home: https://github.com/GhofraneFarhat/Bioinformatic_pipeline
+  license: MIT
+  summary: Bioinformatic pipeline for plasmid analysis
+  description: |
+    Plaspipe is a bioinformatic pipeline for plasmid analysis. It integrates various tools
+    such as PlASgraph, Platon, and Plasbin-flow for comprehensive plasmid analysis.
+    
+    Note: This package requires Gurobi and spektral, which is not included in this conda package.
+    Users must install Gurobi separately and ensure they have a valid license. and for spektral refer to the project
+    documentation for installation instructions.
+    
+
+extra:
+  recipe-maintainers:
+    - GhofraneFarhat
