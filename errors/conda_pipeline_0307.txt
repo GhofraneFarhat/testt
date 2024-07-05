@@ -1,0 +1,14 @@
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+export PREFIX=/home/aniket/anaconda3/conda-bld/plaspipe_1720049840303/_test_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho
+export SRC_DIR=/home/aniket/anaconda3/conda-bld/plaspipe_1720049840303/test_tmp
+import: 'plaspipe'
+Package is being initialized.
+import: 'plaspipe'
++ python -c 'import plaspipe; print(plaspipe.__version__)'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: module 'plaspipe' has no attribute '__version__'
+Package is being initialized.
+WARNING: Tests failed for plaspipe-0.1-py_0.tar.bz2 - moving package to /home/aniket/anaconda3/conda-bld/broken
+TESTS FAILED: plaspipe-0.1-py_0.tar.bz2
